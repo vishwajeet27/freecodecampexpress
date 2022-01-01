@@ -21,6 +21,23 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
+app.get("/", function(req, res){
+  res.send("Hello Express");
+});  //?for displaying hello express and use of app.get
+
+
+//!to send html file to the sever using sendFile
+app.get("/",function(req, res){
+  res.sendFile("/views/index.html", { root: __dirname })
+})
+
+//!midddlewares to pass information
+
+
+app.use("/public", express.static( __dirname + "/public"))
+
+///
+
 var port = process.env.PORT || 3000;
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function(){
   bGround.log('Node is listening on port '+ port + '...')
