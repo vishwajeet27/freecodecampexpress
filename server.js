@@ -21,9 +21,9 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-app.get("/", function(req, res){
-  res.send("Hello Express");
-});  //?for displaying hello express and use of app.get
+// app.get("/", function(req, res){
+//   res.send("Hello Express");
+// });  //?for displaying hello express and use of app.get
 
 
 //!to send html file to the sever using sendFile
