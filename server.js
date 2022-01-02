@@ -31,6 +31,13 @@ app.get("/",function(req, res){
   res.sendFile("/views/index.html", { root: __dirname })
 })
 
+
+app.get("/json", function(req, res){
+  res.json({
+    "message" : "Hello json"
+  })
+})
+
 //!midddlewares to pass information
 
 
